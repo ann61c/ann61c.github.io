@@ -1,0 +1,151 @@
+html {
+  font-family: Lato, "PingFang SC", "Microsoft YaHei", "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+* {
+  --tw-ring-inset: var(--tw-empty);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+}
+.resume {
+  font-size: 14px;
+}
+.resume h1,
+.links {
+  text-align: center;
+}
+.links {
+  list-style-type: disc;
+  padding-inline-start: 35px;
+  padding-left: 0px;
+}
+.links li {
+  display: inline-block;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+.links li a {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: -0.15rem;
+  color: dodgerblue;
+}
+.education,
+.techniques {
+  margin-top: 0.75rem;
+  padding-top: 0px;
+  padding-right: 50px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+}
+.education h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+  height: 17px;
+}
+.resume hr {
+  margin: 5px auto;
+}
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+.school-logo {
+  width: 22px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+}
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: -0.15rem;
+  margin-left: 10px;
+}
+.time {
+  float: right;
+}
+.details ul {
+  list-style-type: disc;
+  padding-inline-start: 25px;
+  margin-bottom: 0.5rem;
+}
+.project-name {
+  margin-left: 4px;
+  font-weight: 700;
+}
+.projects {
+  padding-top: 0px;
+  padding-right: 50px;
+  padding-bottom: 0px;
+  padding-left: 50px;
+}
+summary,
+details {
+  outline: none;
+  cursor: pointer;
+}
+.list-disc {
+  margin-bottom: 0.5rem;
+}
+.introduction {
+  margin-left: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  width: 700px;
+}
+.iconify {
+  width: 25px;
+}
+.projects h2 {
+  height: 17px;
+}
+.techniques ul .iconify {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: -0.15rem;
+  width: 18px;
+}

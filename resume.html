@@ -1,1 +1,124 @@
-<!-- Need Implementation. -->
+<!DOCTYPE html>
+<html lang="en">
+<title>Web Resume</title>
+<meta charset="UTF-8" />
+<meta name="description" content="Gillian Liu">
+<meta name="keywords" content="Gillian Liu">
+<meta name="author" content="Gillian Liu">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="stylesheet" href="resume.css" />
+
+<body>
+    <header class="resume">
+        <h1>
+            Yuchen(Gillian) Liu
+        </h1>
+        <ul class="links">
+            <li><a href=mailto:mail@mail.com target=_blank><span class="iconify" data-icon="ic:outline-email"
+                        data-inline="false"></span> mail@mail.com</a></li>
+            <li><a href=tel:+11234567890 target=_blank><span class="iconify" data-icon="ic:round-phone-android"
+                        data-inline="false"></span> +1 123 456 7890</a></li>
+            <li><a href=https://gillian.moe target=_blank><span class="iconify" data-icon="ic:round-web"
+                        data-inline="false"></span> https://gillian.moe</a></li>
+            <li><a href=https://github.ncsu.edu/ target=_blank><span class="iconify" data-icon="mdi:github"
+                        data-inline="false"></span> Github</a></li>
+        </ul>
+    </header>
+
+    <section class="resume education">
+        <h2><span class="iconify" data-icon="fa:graduation-cap" data-inline="false"></span>Education</h2>
+        <hr>
+        <div id="info">
+            <img class="school-logo" src="https://brand.ncsu.edu/img/2x1-brick.png">
+            <strong>NC State University</strong>
+            <span class="icon"><span class="iconify" data-icon="ri:map-pin-line" data-inline="false"></span>
+                Raleigh</span>
+            <span class="time">Aug 2018 - May 2022 (Expected)</span>
+            <div class="details">
+                <span class="intro">Major - Tech, Engr and Design Educ-BS, College of Education</span>
+                <ul>
+                    <li>Cumulative GPA: 3.0/4.0, 2020 Fall Term GPA: 3.667/4.0</li>
+                    <li>Courses in progress: Software Development Fundamentals, Software Development Fundamentals Lab
+                    </li>
+                    <li>Selected Academic Projects: WolfScheduler, Howl Lot of Java, PackScheduler, and Data Sorting
+                        Time.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume projects">
+        <h2><span class="iconify" data-icon="ri:folders-line" data-inline="false"></span>Projects</h2>
+        <hr>
+        <details open="">
+            <summary><span class="iconify" data-icon="simple-icons:c" data-inline="false"></span><span
+                    class="project-name">Lossy Image Compression</span><span> CSC
+                    230 - C and Software Tools</span><span class="time">March 2021 ~ Apr 2021</span></summary>
+            <div class="project-content">
+                <div class="introduction">
+                    <span>Discrete Cosine Transform (DCT)</span>
+                </div>
+                <ul class="list-disc">
+                    <li>Reading raw PGM image and encoded by DCT formula.</li>
+                    <li>Reading encoded PGM image and decoding by using inverse DCT formula.</li>
+                    <li>Encoding and decoding are processed by using Bitwise Operator.</li>
+                </ul>
+                <hr>
+            </div>
+        </details>
+        <details open="">
+            <summary><span class="iconify" data-icon="simple-icons:java" data-inline="false"></span><span
+                    class="project-name">WolfScheduler</span><span> CSC 216 - Software Development Fundamentals (with
+                    labs)</span><span class="time">Aug 2020 ~ Oct 2020</span></summary>
+            <div class="project-content">
+                <div class="introduction">
+                    <span>This project could help user to track all of the schedule information, and the project is
+                        meant to let users select which classes they are interested in taking, if classes are
+                        conflicting, if there would be issues with travel between campuses, and let them plan their
+                        extracurricular activities.</span>
+                </div>
+                <ul class="list-disc">
+                    <li>Follows the Model-View-Controller (MVC) design pattern.</li>
+                </ul>
+                <hr>
+            </div>
+        </details>
+        <details open="">
+            <summary><span class="iconify" data-icon="vscode-icons:file-type-matlab" data-inline="false"></span><span
+                    class="project-name">Data Sorting Time</span><span> ST 370 - Probability and Statistics for
+                    Engineers</span><span class="time">Jan 2020 ~ May 2020</span></summary>
+            <div class="project-content">
+                <ul class="list-disc">
+                    <li>Measured times of sorting a data set by using different sorting algorithms.</li>
+                    <li>Randomization Use Completely Randomized Design, allocating all experimental units (data size)
+                        among treatments (time complexity).</li>
+                    <li>Replicating Replicate each treatment 3 times for each experimental unit.</li>
+                    <li>Analyzing Use stats, mplot, means, mfit, side by side boxplots, and lm (ANOVA) to analyze the
+                        data.</li>
+                </ul>
+                <hr>
+            </div>
+        </details>
+    </section>
+    <section class="resume techniques">
+        <h2><span class="iconify" data-icon="ri:flask-line" data-inline="false"></span>Techniques</h2>
+        <hr>
+        <ul>
+            <li>Languages:<span class="iconify" data-icon="simple-icons:java" data-inline="false"></span><span
+                    class="iconify" data-icon="simple-icons:html5" data-inline="false"></span><span class="iconify"
+                    data-icon="simple-icons:css3" data-inline="false"></span><span class="iconify"
+                    data-icon="simple-icons:c" data-inline="false"></span><span class="iconify"
+                    data-icon="simple-icons:cplusplus" data-inline="false"></span><span class="iconify"
+                    data-icon="simple-icons:python" data-inline="false"></span></li>
+            <li>Environment: <span class="iconify" data-icon="simple-icons:apple" data-inline="false"></span><span
+                    class="iconify" data-icon="simple-icons:windows" data-inline="false"></span><span class="iconify"
+                    data-icon="simple-icons:linux" data-inline="false"></span></li>
+            <li>Software:<span class="iconify" data-icon="simple-icons:visualstudiocode" data-inline="false"></span><span class="iconify" data-icon="simple-icons:intellijidea" data-inline="false"></span><span class="iconify" data-icon="simple-icons:github" data-inline="false"></span><span class="iconify" data-icon="simple-icons:git" data-inline="false"></span><span class="iconify" data-icon="ri:terminal-box-line" data-inline="false"></span></li>
+        </ul>
+    </section>
+</body>
+
+</html>
