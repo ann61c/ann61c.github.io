@@ -6,12 +6,38 @@
 <meta name="keywords" content="Gillian Liu">
 <meta name="author" content="Gillian Liu">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="/static/css/style.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
 <!-- Please preview this file in browser (Microsoft Edge or Mozilla Firefox) -->
 <style>
+  @font-face {
+    font-family: Circe Extra Light;
+    src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot);
+    src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot?#iefix) format("embedded-opentype"), url(/static/Circe-ExtraLight-171fe7df080d14fe10ea9a6f33bf92b1.woff) format("woff"), url(/static/Circe-ExtraLight-7fc3ecc069378d95e98f69482de84ae2.ttf) format("truetype"), url(/static/Circe-ExtraLight-9cec07d87d28eb5281470c25d0e77472.svg#webfont) format("svg");
+    font-weight: 400;
+    font-style: normal
+  }
+
+
+
+  @font-face {
+    font-family: Circe Regular;
+    src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot);
+    src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Regular-e8c2bdb5866b55bb52b64b8ea8b4a38d.woff) format("woff"), url(/static/Circe-Regular-c7d081a3dfb9356de83ac79a28ec13d4.ttf) format("truetype"), url(/static/Circe-Regular-02f4bdec90f0b712f598dc784b6dda55.svg#webfont) format("svg");
+    font-weight: 400;
+    font-style: normal
+  }
+
+  @font-face {
+    font-family: Circe Bold;
+    src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot);
+    src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Bold-977dee27389906fcdb91575955cf543c.woff) format("woff"), url(/static/Circe-Bold-59d60af3c22a11a2bf842cd9490afb2b.ttf) format("truetype"), url(/static/Circe-Bold-2ac29d8d66ac4fcae44fba33a939f0ad.svg#webfont) format("svg");
+    font-weight: 400;
+    font-style: normal
+  }
+
   body,
   h1,
   h2,
@@ -19,7 +45,11 @@
   h4,
   h5,
   h6 {
-    font-family: "Lato", sans-serif;
+    font-family: Circe Regular, "Lato", sans-serif;
+  }
+
+  header {
+    font-family: Circe Extra Light, "Lato", sans-serif;
   }
 
   .w3-bar,
@@ -28,7 +58,7 @@
     font-family: "Montserrat", sans-serif;
   }
 
-  .fa-anchor,
+  .fa-id-card,
   .fa-graduation-cap {
     font-size: 200px;
   }
@@ -43,6 +73,7 @@
   .audio-container audio {
     width: 100%;
   }
+
   /* Above is for Video & Audio, below is for Animation. */
   button:hover,
   button,
@@ -50,17 +81,20 @@
   .fa:hover,
   .w3-button,
   .w3-button:hover {
-    transition: 200ms; /* It is simple transition for all Font-Awesome element and buttons.*/
+    transition: 200ms;
+    /* It is simple transition for all Font-Awesome element and buttons.*/
   }
+
   /* This one is tricky because I want to have a dynamic background, instead of a dynamic navigation. 
      The idea is inspired by installation process of Windows 8. 
      The MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()
      Example of Windows 8 installation process: https://youtu.be/8WP7AkJo3OE?t=4353 */
   .w3-red {
     background: linear-gradient(-45deg, #ee7753, #e73c7f, #23a6d6, #23d5ac);
-    background-size: 450% 450%;
-    animation: gradient 17s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
   }
+
   /* MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
   @keyframes gradient {
     0% {
@@ -83,10 +117,10 @@
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
         href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Project 1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Reserved</a>
+      <a href="/index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+      <a href="/project1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Data Sorting Time</a>
+      <a href="/project2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Lossy Image Compression</a>
+      <a href="/resume.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Reserved</a>
     </div>
 
@@ -101,8 +135,11 @@
 
   <!-- Header -->
   <header class="w3-container w3-red w3-center" style="padding: 128px 16px">
-    <h1 class="w3-margin w3-jumbo">Gillian Liu</h1>
-    <p class="w3-xlarge">Student @ NC State</p>
+    <!-- <h1 class="w3-margin w3-jumbo">Gillian Liu</h1> -->
+    <p class="w3-xlarge">I help my clients build beautiful design on website</p>
+    <p class="w3-xlarge">or write Java and Python programs. My</p>
+    <p class="w3-xlarge">capabilities range from web design to back-end program,</p>
+    <p class="w3-xlarge">follow a user-friendly approach. </p>
     <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
       Get Started
     </button>
@@ -114,24 +151,31 @@
       <div class="w3-twothird">
         <h1>About</h1>
         <h5 class="w3-padding-32">
-          Some about me, need implementation. 
+          This is <span style="color: #e73c7f;">Gillian Liu</span> speaking...
+          <p></p>
+          Nice to meet you 🤭
+          <p></p>
+          Born at the end of 20th century
+          <p></p>
+          Pisces ♓️
+          <p></p>
+          Made in <span style="color: #ee7753;">Xuzhou, China</span>
+          <p></p>
+          Interested in Sociology
+          <p></p>
+          Previous Engineering student
+          <p></p>
+          Transferred to STEM Ed
+          <p></p>
+          PhD in being quiet person
+          <p></p>
+          Fun fact: Realized hate driving until own the first car
         </h5>
 
-        <p class="w3-text-grey">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-        </p>
       </div>
 
       <div class="w3-third w3-center">
-        <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+        <i class="fa fa-id-card w3-padding-64 w3-text-red"></i>
       </div>
     </div>
   </div>
@@ -140,32 +184,86 @@
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-third w3-center">
-        <i class="fa fa-graduation-cap w3-padding-64 w3-text-red w3-margin-right"></i>
+        <!-- <i class="fa fa-graduation-cap w3-padding-64 w3-text-red w3-margin-right"></i> -->
+        <img src="/static/images/st370_proj.png" alt="ST370 Project image" style="width: 250px;">
       </div>
 
       <div class="w3-twothird">
-        <h1>Project</h1><!-- The title-->
+        <h1>ST 370 : Probability and Statistics for Engineers</h1><!-- The title-->
         <h5 class="w3-padding-32">
-          Some project introduction, needs implementation.
+          Data Sorting Time
         </h5>
         <p class="w3-text-grey">
-          Upon successful completion of this module, you will be able to:
-
-          <br />- Implement the mobile-first principle when designing web pages
-          <br />- Explain the fundamentals of responsive web design
-          <br />- Use a variety of css media queries
-          <br />- Create a mobile-friendly web page
-          <br />- Implement printer-friendly web page styles.
-
+          The goal of this project was meant to conduct an experiment on both our fields of Computer Science and
+          analyzing the data in a statistical way that we learned in class. We are trying to find out the statistical
+          differences by measuring times of sorting a data set by using different sorting algorithms.
         </p>
+        <p class="w3-text-grey">
+          The response variable is sorting time, which is measured in units of seconds (s). There are two factors in our
+          experiment, Factor 1 is Algorithms in different time complexity, and Factor 2 is data size. We choose three
+          levels for Factor 1, including O(n\log(n)), O(kn), and O(n^2), and four levels for factor 2, including 128,
+          256, 512, and 1024 Kilobytes.
+        </p>
+        <button class="w3-button w3-padding-large w3-large w3-margin-top"
+          style="transform: scale(0.7); background-color: #B2EBF2;">
+          Paper
+        </button>
       </div>
     </div>
   </div>
 
-  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Hey, can you hear me?</h1>
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+
+      <div class="w3-twothird">
+        <h1>CSC 230 : C and Software Tools</h1><!-- The title-->
+        <h5 class="w3-padding-32">
+          Lossy Image Compression
+        </h5>
+        <p class="w3-text-grey">
+          The DCT is a common transformation used in lossy compression tasks by applying a version of the
+          two-dimensional Discrete Cosine Transform (DCT) to blocks of the image, then writing out an encoding of each
+          of the resulting blocks. The DCT will let us look at the frequency components in each image block, making it
+          possible to store information about how the shade is changing within a block, rather than just storing
+          intensity values for individual pixels.
+        </p>
+        <p class="w3-text-grey">
+          The j10 image format will start with two 12-bit values giving the height and width of the image. The first 12
+          bits of the output file will give the height of the image and then 12 more bits for the width. After the image
+          size, the j10 file will contain an encoding of each 10x10 block of the image. Blocks will be written out in
+          row-major order, with every block at the top of the image written out left-to-write, then every block below
+          these left-to-right until reaching the bottom of the image. The figure below shows how a 30x40 image would be
+          handled. It would be encoded as 12 10x10 blocks, with three blocks on each row.
+        </p>
+        <p class="w3-text-grey">
+          For an image block, we use X[ i ][ j ] to stand for represent the intensities of the individual pixels. So, X[
+          0 ][ 0 ] will stand for the intensity of a pixel in the upper left corner of the block, X[ 0 ][ 9 ] will be
+          the intensity of a pixel in the upper right, X[ 9 ][ 9 ] will be a pixel in the lower right corner of the
+          block and X[ 9 ][ 0 ] will be the lower left corner. Even though pixel intensities are integers in the range 0
+          .. 255, the transformation will expect these integers to be converted to real values (doubles, with values
+          between 0 and 255).
+        </p>
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style="transform: scale(0.7);">
+          Get Started
+        </button>
+      </div>
+      <div class="w3-third w3-center">
+        <img src="/static/images/dct-example.png" alt="ST370 Project image" style="height: 200px;">
+      </div>
+    </div>
   </div>
 
+  <div class="w3-container w3-black w3-center w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Hey, can you hear me?</h1>
+  </div>
+  <div class="w3-row-padding w3-padding-64 w3-container" style="padding-bottom: 0 !important;">
+    <div class="w3-content">
+      <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="ddf3acd5-c924-444e-8d76-509247437bef"
+        data-page-id="1" data-page-url="https://gillian.moe" data-page-title="Gillian's website"></div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+      <hr>
+    </div>
+  </div>
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-center w3-opacity">
     <div class="w3-xlarge w3-padding-32">
@@ -179,8 +277,7 @@
     <p>
       Powered by
       <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br />
-      Copyright<br />
-      Made with love by Gillian Liu<br />
+      Made with <i class="fa fa-heart" aria-hidden="true" style="color: #e73c7f;"></i> by Gillian<br />
     </p>
   </footer>
 

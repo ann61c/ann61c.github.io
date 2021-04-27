@@ -1,1 +1,248 @@
-<!-- Need Implementation. -->
+<!DOCTYPE html>
+<html lang="en">
+<title>Gillian Liu's website</title>
+<meta charset="UTF-8" />
+<meta name="description" content="Gillian Liu">
+<meta name="keywords" content="Gillian Liu">
+<meta name="author" content="Gillian Liu">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/css/style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
+<!-- Please preview this file in browser (Microsoft Edge or Mozilla Firefox) -->
+<style>
+    @font-face {
+        font-family: Circe Extra Light;
+        src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot);
+        src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot?#iefix) format("embedded-opentype"), url(/static/Circe-ExtraLight-171fe7df080d14fe10ea9a6f33bf92b1.woff) format("woff"), url(/static/Circe-ExtraLight-7fc3ecc069378d95e98f69482de84ae2.ttf) format("truetype"), url(/static/Circe-ExtraLight-9cec07d87d28eb5281470c25d0e77472.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+
+
+    @font-face {
+        font-family: Circe Regular;
+        src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot);
+        src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Regular-e8c2bdb5866b55bb52b64b8ea8b4a38d.woff) format("woff"), url(/static/Circe-Regular-c7d081a3dfb9356de83ac79a28ec13d4.ttf) format("truetype"), url(/static/Circe-Regular-02f4bdec90f0b712f598dc784b6dda55.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    @font-face {
+        font-family: Circe Bold;
+        src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot);
+        src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Bold-977dee27389906fcdb91575955cf543c.woff) format("woff"), url(/static/Circe-Bold-59d60af3c22a11a2bf842cd9490afb2b.ttf) format("truetype"), url(/static/Circe-Bold-2ac29d8d66ac4fcae44fba33a939f0ad.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Circe Regular, "Lato", sans-serif;
+    }
+
+    header {
+        font-family: Circe Extra Light, "Lato", sans-serif;
+    }
+
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .w3-bar {
+        background-color: #fff;
+    }
+
+    .fa-id-card,
+    .fa-graduation-cap {
+        font-size: 200px;
+    }
+
+    .video-container,
+    audio-container {
+        max-width: 1080px;
+        margin: 16px auto;
+    }
+
+    .video-container video,
+    .audio-container audio {
+        width: 100%;
+    }
+
+    /* Above is for Video & Audio, below is for Animation. */
+    button:hover,
+    button,
+    .fa,
+    .fa:hover,
+    .w3-button,
+    .w3-button:hover {
+        transition: 200ms;
+        /* It is simple transition for all Font-Awesome element and buttons.*/
+    }
+
+    /* This one is tricky because I want to have a dynamic background, instead of a dynamic navigation. 
+     The idea is inspired by installation process of Windows 8. 
+     The MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()
+     Example of Windows 8 installation process: https://youtu.be/8WP7AkJo3OE?t=4353 */
+    .w3-red {
+        background: linear-gradient(-45deg, #ee7753, #e73c7f, #23a6d6, #23d5ac);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+    }
+
+    /* MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large"
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="/index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="/project1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Data Sorting Time</a>
+            <a href="/project2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Lossy Image Compression</a>
+            <a href="/resume.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Resume</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Reserved</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Project 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Reserved</a>
+        </div>
+    </div>
+
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+
+            <h1>Data Sorting Time</h1>
+            <h2>Introduction</h2>
+            <h5 class="w3-padding-32">
+                The goal of this project was meant to conduct an experiment on both our fields of Computer Science
+                and analyzing the data in a statistical way that we learned in class. We are trying to find out the
+                statistical differences by measuring times of sorting a data set by using different sorting
+                algorithms.
+            </h5>
+            <h5 class="w3-padding-32">
+                The response variable is sorting time, which is measured in units of seconds (s). There are two
+                factors in our experiment, Factor 1 is Algorithms in different time complexity, and Factor 2 is data
+                size. We choose three levels for Factor 1, including O(n\log(n)), O(kn), and O(n^2), and four levels
+                for factor 2, including 128, 256, 512, and 1024 Kilobytes.
+            </h5>
+            <h5 class="w3-padding-32">
+                For the randomization, we used Completely Randomized Design, allocating all experimental units (data
+                size) among treatments (time complexity). In MATLAB, we used the function rand to obtain the random
+                number.
+            </h5>
+            <h2>Result</h2>
+            <h5 class="w3-padding-32">
+                The first model shows that all the three terms statistically significant: size, comp, and size*comp
+                interaction. The most important term was size*comp interaction, which had a p-value that approach to 0
+                infinitely(showing 0.00000000 in Matlab). In addition, the p-value of size is 4.4409e-16, and p-value of
+                complexity is 2.2204e-16. The R-square of this model was 0.9708, and Standard Error is 71.031.
+            </h5>
+            <h5 class="w3-padding-32">
+                Similarly, there are three significant terms in the second model: size, complexity, and size*comp. We
+                cannot determine or decide which term is the most statistically significant because size and complexity
+                have the same p-value and both of them are infinitely closing to 0(showing 0.00000000 on Matlab).
+                However, from the first model we can see that the complexity is more statistically significant than
+                size, so we can assume that complexity is the most statistically significant here. The R-square is
+                0.98816 and the Standard Error is 0.34244.
+            </h5>
+            <img src="/static/images/rplot_comp.png" alt="ST370 Result" style="width: 300px;">
+            <img src="/static/images/rplot_comp2.png" alt="ST370 Result" style="width: 300px;">
+            <img src="/static/images/rplot_comp3.png" alt="ST370 Result" style="width: 300px;">
+            <img src="/static/images/rplot_size1.png" alt="ST370 Result" style="width: 300px;">
+            <img src="/static/images/rplot_size2.png" alt="ST370 Result" style="width: 300px;">
+            <img src="/static/images/rplot_size3.png" alt="ST370 Result" style="width: 300px;">
+            <h2>Conclusion and Discussion</h2>
+            <h5 class="w3-padding-32">
+                The interaction of size and complexity can be considered more statistically significant in our
+                experiment. This can be explained that in our common sense, a file with bigger size needs more time to
+                load than that with a smaller size under the same circumstances; and different complexity does play an
+                important role in decoding and computation, which also makes different complexity behave differently.
+            </h5>
+            <h5 class="w3-padding-32">
+                Since we have already found out that the interaction of size and complexity was shown to be more
+                significant, it would be interesting to repeat the same experiment on a different platform. MacBook Pro
+                is running on Intel CPU, and what would happen if we repeat the experiment on devices with AMD, Apple,
+                or Qualcomm Snapdragon CPU? Additional experiments could help us to see if the same computing method is
+                universally quick(or slow) on other platform, and we can also try to figure out what makes the
+                differences if we observe some unexpected results.
+            </h5>
+            <!-- <div class="w3-third w3-center">
+        <i class="fa fa-id-card w3-padding-64 w3-text-red"></i>
+      </div> -->
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">Hey, can you hear me?</h1>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container" style="padding-bottom: 0 !important;">
+        <div class="w3-content">
+            <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="ddf3acd5-c924-444e-8d76-509247437bef"
+        data-page-id="1" data-page-url="https://gillian.moe/project1.html" data-page-title="Gillian's website"></div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+            <hr>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br />
+            Made with <i class="fa fa-heart" aria-hidden="true" style="color: #e73c7f;"></i> by Gillian<br />
+        </p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>

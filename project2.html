@@ -1,1 +1,256 @@
-<!-- Need Implementation. -->
+<!DOCTYPE html>
+<html lang="en">
+<title>Gillian Liu's website</title>
+<meta charset="UTF-8" />
+<meta name="description" content="Gillian Liu">
+<meta name="keywords" content="Gillian Liu">
+<meta name="author" content="Gillian Liu">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/css/style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" />
+<!-- Please preview this file in browser (Microsoft Edge or Mozilla Firefox) -->
+<style>
+    @font-face {
+        font-family: Circe Extra Light;
+        src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot);
+        src: url(/static/Circe-ExtraLight-2ff6670b8281283051726cf25cb9b78b.eot?#iefix) format("embedded-opentype"), url(/static/Circe-ExtraLight-171fe7df080d14fe10ea9a6f33bf92b1.woff) format("woff"), url(/static/Circe-ExtraLight-7fc3ecc069378d95e98f69482de84ae2.ttf) format("truetype"), url(/static/Circe-ExtraLight-9cec07d87d28eb5281470c25d0e77472.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+
+
+    @font-face {
+        font-family: Circe Regular;
+        src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot);
+        src: url(/static/Circe-Regular-7786e397b9971d35f3893a1dec2b1b3f.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Regular-e8c2bdb5866b55bb52b64b8ea8b4a38d.woff) format("woff"), url(/static/Circe-Regular-c7d081a3dfb9356de83ac79a28ec13d4.ttf) format("truetype"), url(/static/Circe-Regular-02f4bdec90f0b712f598dc784b6dda55.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    @font-face {
+        font-family: Circe Bold;
+        src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot);
+        src: url(/static/Circe-Bold-6c59e123427d03197dbcddd8e5506deb.eot?#iefix) format("embedded-opentype"), url(/static/Circe-Bold-977dee27389906fcdb91575955cf543c.woff) format("woff"), url(/static/Circe-Bold-59d60af3c22a11a2bf842cd9490afb2b.ttf) format("truetype"), url(/static/Circe-Bold-2ac29d8d66ac4fcae44fba33a939f0ad.svg#webfont) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Circe Regular, "Lato", sans-serif;
+    }
+
+    header {
+        font-family: Circe Extra Light, "Lato", sans-serif;
+    }
+
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .w3-bar {
+        background-color: #fff;
+    }
+
+    .fa-id-card,
+    .fa-graduation-cap {
+        font-size: 200px;
+    }
+
+    .video-container,
+    audio-container {
+        max-width: 1080px;
+        margin: 16px auto;
+    }
+
+    .video-container video,
+    .audio-container audio {
+        width: 100%;
+    }
+
+    /* Above is for Video & Audio, below is for Animation. */
+    button:hover,
+    button,
+    .fa,
+    .fa:hover,
+    .w3-button,
+    .w3-button:hover {
+        transition: 200ms;
+        /* It is simple transition for all Font-Awesome element and buttons.*/
+    }
+
+    /* This one is tricky because I want to have a dynamic background, instead of a dynamic navigation. 
+     The idea is inspired by installation process of Windows 8. 
+     The MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()
+     Example of Windows 8 installation process: https://youtu.be/8WP7AkJo3OE?t=4353 */
+    .w3-red {
+        background: linear-gradient(-45deg, #ee7753, #e73c7f, #23a6d6, #23d5ac);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+    }
+
+    /* MDN page: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large"
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="/index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="/project1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Data Sorting Time</a>
+            <a href="/project2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Lossy Image
+                Compression</a>
+            <a href="/resume.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Resume</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Reserved</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Project 1</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Reserved</a>
+        </div>
+    </div>
+
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+
+            <h1>Lossy Image Compression</h1>
+            <!-- <div class="w3-third w3-center">
+                <i class="fa fa-id-card w3-padding-64 w3-text-red"></i>
+              </div> -->
+            <h2>Introduction</h2>
+            <h5 class="w3-padding-32">
+                The DCT is a common transformation used in lossy compression tasks by applying a version of the
+                two-dimensional Discrete Cosine Transform (DCT) to blocks of the image, then writing out an encoding of
+                each
+                of the resulting blocks. The DCT will let us look at the frequency components in each image block,
+                making it
+                possible to store information about how the shade is changing within a block, rather than just storing
+                intensity values for individual pixels.
+            </h5>
+            <h5 class="w3-padding-32">
+                The j10 image format will start with two 12-bit values giving the height and width of the image. The
+                first 12
+                bits of the output file will give the height of the image and then 12 more bits for the width. After the
+                image
+                size, the j10 file will contain an encoding of each 10x10 block of the image. Blocks will be written out
+                in
+                row-major order, with every block at the top of the image written out left-to-write, then every block
+                below
+                these left-to-right until reaching the bottom of the image. The figure below shows how a 30x40 image
+                would be
+                handled. It would be encoded as 12 10x10 blocks, with three blocks on each row.
+            </h5>
+            <h5 class="w3-padding-32">
+                For an image block, we use X[ i ][ j ] to stand for represent the intensities of the individual pixels.
+                So, X[
+                0 ][ 0 ] will stand for the intensity of a pixel in the upper left corner of the block, X[ 0 ][ 9 ] will
+                be
+                the intensity of a pixel in the upper right, X[ 9 ][ 9 ] will be a pixel in the lower right corner of
+                the
+                block and X[ 9 ][ 0 ] will be the lower left corner. Even though pixel intensities are integers in the
+                range 0
+                .. 255, the transformation will expect these integers to be converted to real values (doubles, with
+                values
+                between 0 and 255).
+            </h5>
+            <h2>Encoding and Decoding</h2>
+            <h5 class="w3-padding-32">
+                The j10 image format will start with two 12-bit values giving the height and width of the image (notice,
+                the order is the reverse of the PGM format). The first 12 bits of the output file will give the height
+                of the image (number of rows) and then 12 more bits for the width (number of columns). With just 12 bits
+                for each of the these values, this format can support images no larger than 4095 x 4095 pixels.
+            </h5>
+            <img src="/static/images/dimension-bits.png" alt="Bitwise">
+            <h5 class="w3-padding-32">
+
+                The following figure shows how the block shown above would be encoded. It still shows the value of 50
+                encoded in the first 7 bits. Then, the next 99 bits represent where the non-zero values are in the
+                remaining elements. The last byte still has 6 unused bits in it.
+            </h5>
+            <img src="/static/images/block-encoding-2.png" alt="Encoding">
+            <h5 class="w3-padding-32">
+                The three non-negative values in the sample DCT block above would be encoded as 1001010 (for the -10 in the top fow), then 0001010 (for the 10 in row 2), then 1001010 (for the -10 in row 2). With these values at the end, the encoding of this entire block would look like the following figure. There's one bit in the last byte that isn't used. If the image had another block after this one, that bit would be used as the first bit in encoding the next block. Blocks don't need to start or end at a byte boundary.
+            </h5>
+            <img src="/static/images/block-encoding-3.png" alt="Encoding">
+            <h2>Image Component</h2>
+            <h5 class="w3-padding-32">
+                The image component provides a struct for representing the contents of a PGM image. It provides functions for reading and writing an image from a file. The starter includes a definition for the image struct you will be using. The pixels in the image will be stored with each row in a dynamically allocated array. We will keep up with all the rows using a dynamically allocated array of pointers, with one pointer pointing to the start of each row. The pix field in the Image struct will hold a pointer to the start of this array of pointers.
+            </h5>
+            <img src="/static/images/image.png" alt="Image component">
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">Hey, can you hear me?</h1>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container" style="padding-bottom: 0 !important;">
+        <div class="w3-content">
+            <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="ddf3acd5-c924-444e-8d76-509247437bef"
+                data-page-id="1" data-page-url="https://gillian.moe/project2.html" data-page-title="Gillian's website">
+            </div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+            <hr>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br />
+            Made with <i class="fa fa-heart" aria-hidden="true" style="color: #e73c7f;"></i> by Gillian<br />
+        </p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>
