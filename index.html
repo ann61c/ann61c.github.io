@@ -2,7 +2,7 @@
 <html lang="en">
 <title>Gillian Liu's website</title>
 <meta charset="UTF-8" />
-<meta name="description" content="Gillian Liu">
+<meta name="description" content="Homepage">
 <meta name="keywords" content="Gillian Liu">
 <meta name="author" content="Gillian Liu">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,18 +63,8 @@
     font-size: 200px;
   }
 
-  .video-container,
-  audio-container {
-    max-width: 1080px;
-    margin: 16px auto;
-  }
 
-  .video-container video,
-  .audio-container audio {
-    width: 100%;
-  }
-
-  /* Above is for Video & Audio, below is for Animation. */
+  /** Animation. */
   button:hover,
   button,
   .fa,
@@ -110,10 +100,12 @@
     }
   }
 
+  /** for bold font */
   .bold {
     font-family: Circe Bold, "Lato", sans-serif;
   }
 
+  /** for regular font */
   .regular {
     font-family: Circe Regular, "Lato", sans-serif;
   }
@@ -145,7 +137,6 @@
 
   <!-- Header -->
   <header class="w3-container w3-red w3-center" style="padding: 128px 16px">
-    <!-- <h1 class="w3-margin w3-jumbo">Gillian Liu</h1> -->
     <p class="w3-xlarge">I help my clients build beautiful design on <span class="regular">website</span></p>
     <p class="w3-xlarge">or write <span class="regular">Java</span> and <span class="regular">Python</span> programs. My
     </p>
@@ -157,49 +148,49 @@
 
   </header>
 
-  <!-- First Grid -->
+  <!-- About me -->
   <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-twothird">
         <h1>About</h1>
-        <h5 class="w3-padding-32">
-          This is <span style="color: #e73c7f;">Gillian Liu</span> speaking...
-          <p></p>
-          Nice to meet you 🤭
-          <p></p>
-          Born at the end of 20th century
-          <p></p>
-          Pisces ♓️
-          <p></p>
-          Made in <span style="color: #ee7753;">Xuzhou, China</span>
-          <p></p>
-          Interested in Sociology
-          <p></p>
-          Previous Engineering student
-          <p></p>
-          Transferred to STEM Ed
-          <p></p>
-          PhD in being a quiet person
-          <p></p>
-          Fun fact: Realized hate driving until own my first car
-        </h5>
+        <h5 class="w3-padding-8">
+          This is <span style="color: #e73c7f;">Gillian Liu</span> speaking...</h5>
+        <h5 class="w3-padding-8">
+          Nice to meet you 🤭</h5>
+        <h5 class="w3-padding-8">
+          Born at the end of 20th century</h5>
+        <h5 class="w3-padding-8">
+          Pisces ♓️</h5>
+        <h5 class="w3-padding-8">
+          Made in <span style="color: #ee7753;">Xuzhou, China</span></h5>
+        <h5 class="w3-padding-8">
+          Interested in Sociology</h5>
+        <h5 class="w3-padding-8">
+          Previous Engineering student</h5>
+        <h5 class="w3-padding-8">
+          Transferred to STEM Ed</h5>
+        <h5 class="w3-padding-8">
+          PhD in being a quiet person</h5>
+        <h5 class="w3-padding-8">
+          Fun fact: Realized hate driving until own my first car</h5>
+
 
       </div>
-
+      <!-- The font awesome -->
       <div class="w3-third w3-center">
         <i class="fa fa-id-card w3-padding-64 w3-text-red"></i>
       </div>
     </div>
   </div>
 
-  <!-- Second Grid -->
+  <!-- Project  -->
   <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
+      <!-- Image -->
       <div class="w3-third w3-center">
-        <!-- <i class="fa fa-graduation-cap w3-padding-64 w3-text-red w3-margin-right"></i> -->
         <img src="/static/images/st370_proj.png" alt="ST370 Project image" style="width: 250px;">
       </div>
-
+      <!-- Title, subtitle, and some introduction -->
       <div class="w3-twothird">
         <h1>ST 370 : Probability and Statistics for Engineers</h1><!-- The title-->
         <h5 class="w3-padding-32">
@@ -216,17 +207,17 @@
           levels for Factor 1, including O(n\log(n)), O(kn), and O(n^2), and four levels for factor 2, including 128,
           256, 512, and 1024 Kilobytes.
         </p>
-        <button class="w3-button w3-padding-large w3-large w3-margin-top"
-          style="transform: scale(0.7); background-color: #B2EBF2;">
+        <a class="w3-button w3-padding-large w3-large w3-margin-top"
+          style="transform: scale(0.7); background-color: #B2EBF2;" onclick="showAlert()">
           Paper
-        </button>
+        </a>
       </div>
     </div>
   </div>
 
   <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
-
+      <!-- Title, subtitle, and some introduction-->
       <div class="w3-twothird">
         <h1>CSC 230 : C and Software Tools</h1><!-- The title-->
         <h5 class="w3-padding-32">
@@ -239,37 +230,25 @@
           possible to store information about how the shade is changing within a block, rather than just storing
           intensity values for individual pixels.
         </p>
-        <p class="w3-text-grey">
-          The j10 image format will start with two 12-bit values giving the height and width of the image. The first 12
-          bits of the output file will give the height of the image and then 12 more bits for the width. After the image
-          size, the j10 file will contain an encoding of each 10x10 block of the image. Blocks will be written out in
-          row-major order, with every block at the top of the image written out left-to-write, then every block below
-          these left-to-right until reaching the bottom of the image. The figure below shows how a 30x40 image would be
-          handled. It would be encoded as 12 10x10 blocks, with three blocks on each row.
-        </p>
-        <p class="w3-text-grey">
-          For an image block, we use X[ i ][ j ] to stand for represent the intensities of the individual pixels. So, X[
-          0 ][ 0 ] will stand for the intensity of a pixel in the upper left corner of the block, X[ 0 ][ 9 ] will be
-          the intensity of a pixel in the upper right, X[ 9 ][ 9 ] will be a pixel in the lower right corner of the
-          block and X[ 9 ][ 0 ] will be the lower left corner. Even though pixel intensities are integers in the range 0
-          .. 255, the transformation will expect these integers to be converted to real values (doubles, with values
-          between 0 and 255).
-        </p>
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style="transform: scale(0.7);">
-          Get Started
-        </button>
+        <!-- resonstruct the button -->
+        <a href="https://github.ncsu.edu/engr-csc230-spring2021/yliu110/tree/master/p5"
+          class="w3-button w3-padding-large w3-large w3-margin-top"
+          style="transform: scale(0.7); background-color:aquamarine;" target="_blank">
+          Get the code
+        </a>
       </div>
       <div class="w3-third w3-center">
         <img src="/static/images/dct-example.png" alt="ST370 Project image" style="height: 200px;">
       </div>
     </div>
   </div>
-
+  <!-- The comment -->
   <div class="w3-container w3-black w3-center w3-padding-64">
     <h1 class="w3-margin w3-xlarge" id="contact-me">Hey, leave a message?</h1>
   </div>
   <div class="w3-row-padding w3-padding-64 w3-container" style="padding-bottom: 0 !important;">
     <div class="w3-content">
+      <!-- Main part of comment, provided by cusdis -->
       <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="ddf3acd5-c924-444e-8d76-509247437bef"
         data-page-id="0" data-page-url="https://gillian.moe" data-page-title="Gillian's website"></div>
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
@@ -301,6 +280,9 @@
       } else {
         x.className = x.className.replace(" w3-show", "");
       }
+    }
+    function showAlert() {
+      alert("Please contact me for further information.")
     }
   </script>
 

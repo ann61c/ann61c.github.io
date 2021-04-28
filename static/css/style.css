@@ -1,5 +1,5 @@
 /**
- * Modified by Gillian Liu(yliu110) on Mar 23 2021.
+ * Modified by Gillian Liu(yliu110) on Mar 23 2021, and Apr 29, 2021.
  */
 
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
@@ -1184,6 +1184,11 @@ a {
 }
 .w3-padding-large {
   padding: 12px 24px !important;
+}
+/** Added on my own */
+.w3-padding-8 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 .w3-padding-16 {
   padding-top: 16px !important;
