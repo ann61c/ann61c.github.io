@@ -146,79 +146,30 @@
     <div class="w3-row-padding w3-padding-64 w3-container">
         <div class="w3-content">
 
-            <h1>Lossy Image Compression</h1>
+            <h1>About</h1>
+            <h2>me</h2>
             <!-- <div class="w3-third w3-center">
                 <i class="fa fa-id-card w3-padding-64 w3-text-red"></i>
               </div> -->
-            <h2>Introduction</h2>
             <h5 class="w3-padding-32">
-                The DCT is a common transformation used in lossy compression tasks by applying a version of the
-                two-dimensional Discrete Cosine Transform (DCT) to blocks of the image, then writing out an encoding of
-                each
-                of the resulting blocks. The DCT will let us look at the frequency components in each image block,
-                making it
-                possible to store information about how the shade is changing within a block, rather than just storing
-                intensity values for individual pixels.
+                I'm a dreamer. I love exploring new things and experiencing adventure. I'm a private person. I change my
+                prefer name every year.
+            </h5>
+            <h2>this website</h2>
+            <h5 class="w3-padding-32">
+                It's a project of my HTML class. It might not last long, I think. The whole project will be removed from
+                this domain and archived somewhere on 1st May, 2021. The short life of the website is just like many
+                things in the real life. The good things will eventually disappear.
             </h5>
             <h5 class="w3-padding-32">
-                The j10 image format will start with two 12-bit values giving the height and width of the image. The
-                first 12
-                bits of the output file will give the height of the image and then 12 more bits for the width. After the
-                image
-                size, the j10 file will contain an encoding of each 10x10 block of the image. Blocks will be written out
-                in
-                row-major order, with every block at the top of the image written out left-to-write, then every block
-                below
-                these left-to-right until reaching the bottom of the image. The figure below shows how a 30x40 image
-                would be
-                handled. It would be encoded as 12 10x10 blocks, with three blocks on each row.
+                However, I would like to introduce my website to every visitor. The frame of the website is from
+                w3.css. I added some animation, and made some adjustments to make it more beautiful and organized. The
+                website is hosted in Github, and Cloudflare helps speed up the network, and provides the SSL
+                certificate.
             </h5>
             <h5 class="w3-padding-32">
-                For an image block, we use X[ i ][ j ] to stand for represent the intensities of the individual pixels.
-                So, X[
-                0 ][ 0 ] will stand for the intensity of a pixel in the upper left corner of the block, X[ 0 ][ 9 ] will
-                be
-                the intensity of a pixel in the upper right, X[ 9 ][ 9 ] will be a pixel in the lower right corner of
-                the
-                block and X[ 9 ][ 0 ] will be the lower left corner. Even though pixel intensities are integers in the
-                range 0
-                .. 255, the transformation will expect these integers to be converted to real values (doubles, with
-                values
-                between 0 and 255).
+                If you are in NC State University, take Professor John Howe's course. He is nice.
             </h5>
-            <h2>Encoding and Decoding</h2>
-            <h5 class="w3-padding-32">
-                The j10 image format will start with two 12-bit values giving the height and width of the image (notice,
-                the order is the reverse of the PGM format). The first 12 bits of the output file will give the height
-                of the image (number of rows) and then 12 more bits for the width (number of columns). With just 12 bits
-                for each of the these values, this format can support images no larger than 4095 x 4095 pixels.
-            </h5>
-            <img src="/static/images/dimension-bits.png" alt="Bitwise">
-            <h5 class="w3-padding-32">
-
-                The following figure shows how the block shown above would be encoded. It still shows the value of 50
-                encoded in the first 7 bits. Then, the next 99 bits represent where the non-zero values are in the
-                remaining elements. The last byte still has 6 unused bits in it.
-            </h5>
-            <img src="/static/images/block-encoding-2.png" alt="Encoding">
-            <h5 class="w3-padding-32">
-                The three non-negative values in the sample DCT block above would be encoded as 1001010 (for the -10 in
-                the top fow), then 0001010 (for the 10 in row 2), then 1001010 (for the -10 in row 2). With these values
-                at the end, the encoding of this entire block would look like the following figure. There's one bit in
-                the last byte that isn't used. If the image had another block after this one, that bit would be used as
-                the first bit in encoding the next block. Blocks don't need to start or end at a byte boundary.
-            </h5>
-            <img src="/static/images/block-encoding-3.png" alt="Encoding">
-            <h2>Image Component</h2>
-            <h5 class="w3-padding-32">
-                The image component provides a struct for representing the contents of a PGM image. It provides
-                functions for reading and writing an image from a file. The starter includes a definition for the image
-                struct you will be using. The pixels in the image will be stored with each row in a dynamically
-                allocated array. We will keep up with all the rows using a dynamically allocated array of pointers, with
-                one pointer pointing to the start of each row. The pix field in the Image struct will hold a pointer to
-                the start of this array of pointers.
-            </h5>
-            <img src="/static/images/image.png" alt="Image component">
         </div>
     </div>
 
@@ -228,7 +179,7 @@
     <div class="w3-row-padding w3-padding-64 w3-container" style="padding-bottom: 0 !important;">
         <div class="w3-content">
             <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="ddf3acd5-c924-444e-8d76-509247437bef"
-                data-page-id="2" data-page-url="https://gillian.moe/project2.html" data-page-title="Gillian's website">
+                data-page-id="3" data-page-url="https://gillian.moe/about.html" data-page-title="Gillian's website">
             </div>
             <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
             <hr>
