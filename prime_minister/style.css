@@ -1,0 +1,158 @@
+/**
+ * @author: Gillian Liu (yliu110);
+ * This css file is for the Yes, Minister and Yes, Prime Minister project, 
+ * and it is a website collecting excessive, rigid or redundant scripts and conversations.
+ * This website doesn't have a dark mode, but it is user-friendly and reader-friendly. 
+ * For the best experience, please use Mozilla Firefox.
+ */
+body {
+  background: #f2e7c4;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.8;
+  font-size: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slogan h2 {
+  font-size: 38px;
+  color: #d93030;
+}
+p {
+  font-size: 1.2rem;
+}
+.content p {
+  margin-bottom: 50px;
+}
+.welcome p {
+  margin: 0 !important;
+}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.84);
+}
+a:hover {
+  text-decoration: underline;
+}
+header {
+  display: grid;
+  grid-template-columns: auto 29%;
+  margin: 30px 0 0 30px;
+}
+.logo img {
+  max-width: 130px;
+}
+nav {
+  background: #a68a72;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav a {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+section {
+  margin: 30px 30px 0 30px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto 29%;
+  margin: 30px 30px 0 30px;
+  width: 1300px;
+}
+.content {
+  max-width: 70%;
+  padding: 0 0 0 30px;
+}
+.content a:hover {
+  text-decoration: none !important;
+}
+.sidebar {
+  right: 0;
+  margin-top: 30px;
+  position: absolute;
+  top: 210px;
+  width: 140px;
+  z-index: 100;
+}
+.sidebar a {
+  color: #d93030;
+}
+.float-content {
+  width: 140px;
+  position: fixed;
+  transition: 0.5s;
+  top: 200px;
+}
+.title--right {
+  font-size: 16px;
+  /*color: rgba(0, 0, 0, 0.6);*/
+  color: #400101;
+}
+
+.nav-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  outline: none;
+}
+.single-input span {
+  font-size: 12px;
+  color: crimson;
+}
+.input-group {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 3px 15px;
+  border-radius: 3px;
+  height: 30px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.input-textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+}
+.input-group:focus {
+  border-color: #63c00c;
+}
+.btn-submit {
+  background-color: #d93030;
+  border: 1px solid #d93030;
+  border-radius: 4px;
+  padding: 5px 20px;
+  color: hsla(0, 0%, 100%, 0.97);
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 120px;
+  float: right;
+}
+.confirmation {
+  margin-left: auto;
+}
+
+.bernard,
+.hacker,
+.humphrey {
+  max-width: 200px;
+  float: right;
+}
+.copyright p {
+  font-size: 1rem;
+}
